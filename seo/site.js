@@ -29,8 +29,10 @@ export const SITE_URL = process.env.NOINDEX === '1' ? '' : (process.env.SITE_URL
 
 // Linked from every page's footer, so it has to be a repository a visitor can
 // actually open. Claiming the files never leave your computer is worth more
-// when anyone can go and check.
-export const REPO_URL = 'https://github.com/snowbeee/tarsia-web'
+// when anyone can go and check. Shared with the app, which builds its report
+// links from the same module — the explicit extension is because this file is
+// read by vite.config.js in plain Node, which does not resolve without one.
+export { REPO_URL } from '../src/lib/links.js'
 
 // 1200x630 is the size every social network crops from; see seo/og.svg.
 export const OG_IMAGE = 'og.png'

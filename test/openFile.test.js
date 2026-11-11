@@ -41,6 +41,21 @@ test('a template with no geometry is reported, not applied', () => {
   assert.match(error, /Unrecognised template/)
 })
 
+// A file nobody can draw is the one case where the author needs the file
+// itself, so the two facts that make it fixable travel with the error rather
+// than only inside a sentence meant for a human to read.
+test('a template with no geometry carries what is needed to report it', () => {
+  const text = sample('tri18.fjsw').replace('standard triangular jigsaw 18', 'martian jigsaw 7')
+  const { report } = projectFromFileText('weird.fjsw', text)
+  assert.equal(report.templateId, 'martian jigsaw 7')
+  assert.ok(report.pairCount > 0)
+})
+
+test('a file that opens fine offers nothing to report', () => {
+  const { report } = projectFromFileText('tri18.fjsw', sample('tri18.fjsw'))
+  assert.equal(report, undefined)
+})
+
 test('an unreadable file throws before any puzzle is produced', () => {
   assert.throws(() => projectFromFileText('broken.tarsia.json', '{ not json'), /valid JSON/)
   assert.throws(() => projectFromFileText('empty.fjsw', 'nonsense, not xml'), /parse/i)

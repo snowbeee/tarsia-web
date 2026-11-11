@@ -6,6 +6,7 @@
 // seo/faq.js, so the four pages cannot drift apart from each other.
 
 import { FAQ } from './faq.js'
+import { CONTACT_EMAIL, ISSUES_URL } from '../src/lib/links.js'
 import { OG_IMAGE, PAGES, REPO_URL, SITE_NAME, SITE_URL } from './site.js'
 
 const esc = (s) =>
@@ -88,6 +89,16 @@ function shortTitle(p) {
   return p.nav || p.title.split(/ — |[,?]/)[0]
 }
 
+// Said once, in the footer of every page. An address only appears when one
+// is configured — a mailto: that goes nowhere is worse than none, because by
+// the time it fails the reader had already decided to tell you something.
+const contactSentence = () => {
+  const issue = `<a href="${esc(ISSUES_URL)}/new">open an issue</a>`
+  return CONTACT_EMAIL
+    ? `<a href="mailto:${esc(CONTACT_EMAIL)}">Email me</a> or ${issue} \u2014 both are read.`
+    : `Please ${issue}.`
+}
+
 const footer = (base, current) =>
   [
     '<footer class="site-footer">',
@@ -98,6 +109,7 @@ const footer = (base, current) =>
     `<li><a href="${esc(REPO_URL)}">Source code on GitHub</a></li>`,
     '</ul>',
     `<p class="small">${esc(SITE_NAME)} is free and open source. Puzzles are built and printed by your own browser; nothing you open or type is uploaded.</p>`,
+    `<p class="small">Something not working, or a shape you need that isn't here? ${contactSentence()}</p>`,
     '</footer>',
   ].join('\n')
 

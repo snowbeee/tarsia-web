@@ -16,9 +16,12 @@ import { ensurePairs, hasPairContent, looksLikeProject, parseProject } from './p
  * cannot take the current puzzle down with it. The caller decides whether the
  * candidate is allowed to land, and can ask first.
  *
- * @returns {{ project: object, error?: undefined } | { project?: undefined, error: string }}
+ * @returns {{ project: object, error?: undefined } | { project?: undefined, error: string, report?: {templateId: string, pairCount: number} }}
  *   A readable `error` for a file that parsed but can't be drawn; throws for
- *   one that couldn't be read at all.
+ *   one that couldn't be read at all. `report` carries the two facts that
+ *   make such a file fixable — which template it asked for, and how many
+ *   pairs it holds — so the caller can offer to pass them on without the
+ *   reader having to retype anything. See lib/report.js.
  */
 export function projectFromFileText(fileName, text) {
   if (looksLikeProject(fileName, text)) {
@@ -33,6 +36,7 @@ export function projectFromFileText(fileName, text) {
       error: known
         ? `"${parsed.templateId}" is a template we recognise, but it can't be drawn. The questions and answers read fine (${parsed.pairs.length} pairs). ${UNSUPPORTED_TEMPLATE_NOTES[parsed.templateId] ?? ''}`.trim()
         : `Unrecognised template: "${parsed.templateId}". The questions/answers parsed fine (${parsed.pairs.length} pairs), but this is a template we haven't seen before.`,
+      report: { templateId: parsed.templateId, pairCount: parsed.pairs.length },
     }
   }
 

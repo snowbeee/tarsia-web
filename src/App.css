@@ -28,6 +28,18 @@
   padding: 10px;
   margin-top: 12px;
 }
+.error p {
+  margin: 0;
+}
+/* Inherits the banner's colour rather than the link colour: a blue link on
+   the red panel reads as a different message sitting inside the first one. */
+.error-actions {
+  margin-top: 8px !important;
+  font-size: 14px;
+}
+.error-actions a {
+  color: inherit;
+}
 .puzzle {
   margin-top: 20px;
   /* White in both schemes: the SVG inside is the printed page, drawn white

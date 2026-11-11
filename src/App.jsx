@@ -6,6 +6,7 @@ import PuzzleView from './lib/render/PuzzleView'
 import PairEditor from './lib/edit/PairEditor.jsx'
 import { buildPuzzlePdf, downloadBlob } from './lib/pdf/exportPuzzlePdf.jsx'
 import { projectFromFileText, replaceWorkingCopy } from './lib/openFile'
+import { reportUnsupportedTemplate } from './lib/report'
 import { loadPuzzleFont } from './lib/render/puzzleFont'
 import {
   blankPairsFor,
@@ -40,6 +41,33 @@ const describeHidden = {
     `(${n} more ${n === 1 ? 'pair is' : 'pairs are'} written but unused at this size — kept in case you go back to a bigger shape.)`,
 }
 
+/**
+ * Offered under a file that parsed but whose shape this build cannot draw.
+ *
+ * The template name is the entire diagnosis and it is already on screen, so
+ * the links carry it rather than asking the reader to copy it out. Both open
+ * something they then choose to send; nothing leaves the browser here, which
+ * is the same promise the rest of the app makes.
+ */
+function ReportLinks({ about }) {
+  const { email, issue } = reportUnsupportedTemplate(about)
+  return (
+    <p className="error-actions">
+      Can this shape be added? Send the file and it usually can be.{' '}
+      {email && (
+        <>
+          <a href={email}>Email it</a>
+          {', or '}
+        </>
+      )}
+      <a href={issue} target="_blank" rel="noreferrer">
+        open an issue on GitHub
+      </a>
+      .
+    </p>
+  )
+}
+
 function App() {
   // Opening always starts blank. The previous working copy is still read — it
   // is offered back rather than restored over the top, because the app is as
@@ -49,7 +77,12 @@ function App() {
   // below can write over it.
   const [recovered, setRecovered] = useState(loadDraft)
   const [project, setProject] = useState(newPuzzle)
-  const [error, setError] = useState(null)
+  // A failure, and — when the file parsed but its shape can't be drawn —
+  // what would let the reader tell us about it. Held together so that no
+  // path can leave a stale report attached to an unrelated message.
+  const [failure, setFailure] = useState(null)
+  const fail = (message, report = null) => setFailure({ message, report })
+  const clearFailure = () => setFailure(null)
   const [busy, setBusy] = useState(false)
   // Only ever flipped to force one re-render; see the effect below.
   const [, setFontLoaded] = useState(false)
@@ -124,7 +157,7 @@ function App() {
     clearDraft()
     setProject(newPuzzle())
     setRecovered(null)
-    setError(null)
+    clearFailure()
   }
 
   // Taking the draft back makes it the working copy again, and the offer has
@@ -132,7 +165,7 @@ function App() {
   const restoreDraft = () => {
     setProject(recovered)
     setRecovered(null)
-    setError(null)
+    clearFailure()
   }
 
   const clearAll = () => {
@@ -149,12 +182,12 @@ function App() {
 
   const handleDownloadPdf = async () => {
     setBusy(true)
-    setError(null)
+    clearFailure()
     try {
       const blob = await buildPuzzlePdf({ layout, pairs, title: title || 'Puzzle' })
       downloadBlob(blob, `${title || 'puzzle'}.pdf`)
     } catch (e) {
-      setError(`Could not build the PDF: ${e.message}`)
+      fail(`Could not build the PDF: ${e.message}`)
     } finally {
       setBusy(false)
     }
@@ -166,12 +199,12 @@ function App() {
   // teacher asked, exactly as New asks. A file that can't be read, or a cancel,
   // leaves both the puzzle and its draft alone.
   const handleFile = async (file) => {
-    setError(null)
+    clearFailure()
     try {
       const text = await file.text()
-      const { project: candidate, error: why } = projectFromFileText(file.name, text)
+      const { project: candidate, error: why, report } = projectFromFileText(file.name, text)
       if (why) {
-        setError(why)
+        fail(why, report)
         return
       }
       setProject(
@@ -180,7 +213,7 @@ function App() {
         ),
       )
     } catch (e) {
-      setError(e.message)
+      fail(e.message)
     }
   }
 
@@ -249,7 +282,12 @@ function App() {
         </p>
       )}
 
-      {error && <p className="error">{error}</p>}
+      {failure && (
+        <div className="error">
+          <p>{failure.message}</p>
+          {failure.report && <ReportLinks about={failure.report} />}
+        </div>
+      )}
 
       {layout.verified === false && (
         <p className="warning">
