@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { collectSlotCodes } from '../layouts'
+import PastePanel from './PastePanel.jsx'
 
 // Editing a puzzle's content — the same list whether the puzzle was imported
 // from a .fjsw file or created here.
@@ -18,7 +20,8 @@ import { collectSlotCodes } from '../layouts'
 const filledIn = (row) =>
   (!row.usesQuestion || row.pair.question.trim()) && (!row.usesAnswer || row.pair.answer.trim())
 
-export default function PairEditor({ pairs, layout, onChange, reset, describeHidden }) {
+export default function PairEditor({ pairs, layout, onChange, onPaste, reset, describeHidden }) {
+  const [pasting, setPasting] = useState(false)
   const codes = collectSlotCodes(layout)
 
   const rows = pairs
@@ -43,13 +46,32 @@ export default function PairEditor({ pairs, layout, onChange, reset, describeHid
     <div className="editor">
       <div className="editor-head">
         <h2>Questions and answers</h2>
-        {reset && (
-          <button type="button" className="reset" onClick={reset.onClick} disabled={reset.disabled}>
-            {reset.label}
-          </button>
-        )}
+        <div className="editor-tools">
+          {!pasting && (
+            <button type="button" className="reset" onClick={() => setPasting(true)}>
+              Paste a list…
+            </button>
+          )}
+          {reset && (
+            <button type="button" className="reset" onClick={reset.onClick} disabled={reset.disabled}>
+              {reset.label}
+            </button>
+          )}
+        </div>
       </div>
 
+      {pasting && (
+        <PastePanel
+          slotCount={rows.length}
+          onCancel={() => setPasting(false)}
+          onUse={(parsed) => {
+            if (onPaste(parsed)) setPasting(false)
+          }}
+        />
+      )}
+
+      {!pasting && (
+        <>
       <p className="editor-note">
         <strong>
           {done} of {rows.length} filled in
@@ -95,6 +117,8 @@ export default function PairEditor({ pairs, layout, onChange, reset, describeHid
           </li>
         ))}
       </ol>
+        </>
+      )}
     </div>
   )
 }

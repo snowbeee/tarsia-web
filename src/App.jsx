@@ -4,6 +4,7 @@ import { DEFAULT_SPEC } from './lib/builder/templates'
 import ShapePicker from './lib/builder/ShapePicker'
 import PuzzleView from './lib/render/PuzzleView'
 import PairEditor from './lib/edit/PairEditor.jsx'
+import { fillPairsFrom } from './lib/edit/pastePairs'
 import { buildPuzzlePdf, downloadBlob } from './lib/pdf/exportPuzzlePdf.jsx'
 import { projectFromFileText, replaceWorkingCopy } from './lib/openFile'
 import { reportUnsupportedTemplate } from './lib/report'
@@ -175,6 +176,21 @@ function App() {
 
   const revert = () => patch({ pairs: ensurePairs(baseline, requiredPairCount(layout)) })
 
+  // Pasting a list replaces every question and answer at once, which is the
+  // same kind of act as Open or New — so it asks the same way, and only when
+  // there is something to lose. Returning whether it went ahead lets the
+  // panel stay open on a cancel, with the text still in it.
+  const pastePairs = (parsed) => {
+    if (hasContent && !window.confirm('Replace the questions and answers with the pasted list?')) {
+      return false
+    }
+    setProject((current) => {
+      const { pairs: filled } = fillPairsFrom(current.pairs, resolveLayout(current.source), parsed)
+      return { ...current, pairs: filled }
+    })
+    return true
+  }
+
   const saveFile = () => {
     const blob = new Blob([serialiseProject(project)], { type: 'application/json' })
     downloadBlob(blob, `${title || 'puzzle'}.tarsia.json`)
@@ -306,6 +322,7 @@ function App() {
           pairs={pairs}
           layout={layout}
           onChange={updatePair}
+          onPaste={pastePairs}
           describeHidden={describeHidden[source.kind]}
           reset={
             baseline

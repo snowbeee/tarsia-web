@@ -20,7 +20,8 @@ what's actually been verified vs. assumed.
 What works right now:
 
 - **Create a puzzle from scratch.** Pick a shape and size, type the questions
-  and answers, print it. The shapes are generated rather than hand-tabulated,
+  and answers — or paste two columns straight out of a spreadsheet — and
+  print it. The shapes are generated rather than hand-tabulated,
   so they come in sizes the desktop app never offered:
 
   | Shape | Sizes | Pieces | Pairs |
@@ -160,6 +161,8 @@ src/
       ShapePicker.jsx        — shape/size controls
     edit/
       PairEditor.jsx        — editable list of the questions and answers
+      PastePanel.jsx         — paste a list in, with a preview before it lands
+      pastePairs.js           — parses pasted text; lays it onto the rows a layout uses
     pdf/
       exportPuzzlePdf.jsx   — builds the worksheet + answer key PDF
     render/
