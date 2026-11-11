@@ -245,11 +245,14 @@ function App() {
         <button type="button" onClick={() => fileInput.current?.click()}>
           Open…
         </button>
+        {/* Driven by the Open… button, but it stays focusable (see the CSS),
+            so it needs a name of its own rather than being an unnamed control. */}
         <input
           ref={fileInput}
           type="file"
           accept=".fjsw,.json"
           className="hidden-input"
+          aria-label="Open a puzzle file"
           onChange={onInputChange}
         />
         <button type="button" onClick={saveFile}>

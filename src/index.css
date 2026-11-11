@@ -4,7 +4,11 @@
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  /* 4.9:1 on the page background. The original #aa3bff came out at 4.39:1,
+     which fails WCAG AA for body text by a hair — and this is the colour
+     every link on the written pages is drawn in. The dark scheme's lighter
+     purple below is already fine at 6.77:1. */
+  --accent: #a033f5;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);

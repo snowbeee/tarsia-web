@@ -21,7 +21,7 @@ const INK = '#14121a'
 const MUTED = '#6b6375'
 const LINE = '#14121a'
 const FILL = '#f4f3ec'
-const ACCENT = '#aa3bff'
+const ACCENT = '#a033f5'
 
 // A triangular jigsaw of side 4 — 16 pieces — drawn the way the app draws it.
 // Rows run top to bottom; each row r holds r upward triangles interleaved
