@@ -1,0 +1,272 @@
+<!--
+
+Formulator Tarsia
+Copyright (c) 2005-2009 by Hermitech Laboratory. All Rights Reserved.
+http://www.mmlsoft.com
+
+This file contains a summary information about the puzzle document.
+
+NOTE - Formulator Tarsia will add and remove information
+       about the saved puzzle document in this file.
+       Please do not edit what you see in these blocks 
+       of generated text. Changes to this file may cause 
+       incorrect behavior.
+
+-->
+
+<eqnpairs>
+  <author></author>
+  <institution></institution>
+  <comments></comments>
+  <template id='standard square jigsaw 24' left-margin='15.00' top-margin='15.00' right-margin='15.00' bottom-margin='15.00' width='210' height='297' scale='1.00' orientation='portrait'/>
+  <gui-settings>
+    <active-view view-id='input'/>
+    <active-option view-id='backSide' option-id='backSide.normal size'/>
+    <active-option view-id='input' option-id='input.paired.9'/>
+    <active-option view-id='output' option-id='output.normal size'/>
+    <active-option view-id='solution' option-id='solution.full version'/>
+    <active-option view-id='table' option-id='table'/>
+  </gui-settings>
+  <eqnpair>
+    <math display="block">      <mrow>        <mfrac>          <mn>1</mn>
+          <mrow>            <mn>2</mn>
+            <mi>x</mi>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">      <mrow>        <mfrac>          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">      <mrow>        <mfrac>          <mn>3</mn>
+          <mrow>            <mn>2</mn>
+            <msup>              <mi>x</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">      <mrow>        <mfrac>          <mn>3</mn>
+          <mn>2</mn>
+        </mfrac>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">      <mrow>        <mfrac>          <mn>1</mn>
+          <msqrt>            <mi>x</mi>
+          </msqrt>
+        </mfrac>
+      </mrow>
+    </math>
+<math display = 'block'>
+  <mrow>
+    <msup>
+      <mi>x</mi>
+      <mrow>
+        <mo>&minus;</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+      </mrow>
+    </msup>
+  </mrow>
+</math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">      <mrow>        <msup>          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo>&minus;</mo>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">      <mrow>        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>1</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">      <mrow>        <mfrac>          <mrow>            <msup>              <mi>x</mi>
+              <mn>3</mn>
+            </msup>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow>            <mn>2</mn>
+            <mi>x</mi>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">      <mrow>        <mfrac>          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <msup>          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mfrac>          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">      <mrow>        <mfrac>          <mrow>            <mi>x</mi>
+            <mo>&minus;</mo>
+            <mn>4</mn>
+          </mrow>
+          <msup>            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">      <mrow>        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>4</mn>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">      <mrow>        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo>&minus;</mo>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">      <mrow>        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>&minus;</mo>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>3</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">      <mrow>        <msup>          <mi>x</mi>
+          <mn>3</mn>
+        </msup>
+        <mo stretchy="false">(</mo>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>2</mn>
+        <msup>          <mi>x</mi>
+          <mrow>            <mo>&minus;</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">      <mrow>        <mi mathsize="small">x</mi>
+        <mo mathsize="small">&minus;</mo>
+        <mn mathsize="small">2</mn>
+        <msup>          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+</eqnpairs>

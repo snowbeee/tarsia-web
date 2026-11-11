@@ -1,0 +1,319 @@
+.app {
+  /* #root is a fixed 1126px page frame (see index.css), and .app is a flex
+     item inside it with an auto cross-axis margin — which disables stretch,
+     so without width it sizes to its content and the layout collapses to
+     whatever the widest child happens to be. */
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 24px;
+  /* Without this, width:100% and the padding add up to more than the viewport
+     and the whole page scrolls sideways on a phone. */
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  text-align: left;
+}
+.subtitle {
+  color: var(--text);
+}
+.filename, .meta {
+  font-size: 14px;
+  color: var(--text);
+}
+.error {
+  color: var(--error-text);
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 12px;
+}
+.puzzle {
+  margin-top: 20px;
+  /* White in both schemes: the SVG inside is the printed page, drawn white
+     with near-black strokes for the PDF. See --sheet-bg in index.css. */
+  background: var(--sheet-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+.download {
+  padding: 9px 16px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--solid-text);
+  background: var(--solid-bg);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.download:disabled {
+  background: var(--disabled-bg);
+  cursor: default;
+}
+.recovered {
+  font-size: 14px;
+  color: var(--notice-text);
+  background: var(--notice-bg);
+  border: 1px solid var(--notice-border);
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 12px;
+}
+.warning {
+  color: var(--warning-text);
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 12px;
+}
+
+/* Preview and editor side by side on a wide screen, stacked on a narrow one.
+   The preview sticks so it stays in view while working down a long list —
+   a hexagon-30 has 30 pairs and the point is watching the puzzle change. */
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 24px;
+  align-items: start;
+  margin-top: 20px;
+}
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (min-width: 901px) {
+  .workspace .puzzle {
+    position: sticky;
+    top: 16px;
+  }
+}
+.workspace .puzzle {
+  margin-top: 0;
+}
+
+.editor-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.editor h2 {
+  font-size: 17px;
+  margin: 0 0 4px;
+}
+.editor-note {
+  font-size: 13px;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+.reset {
+  font: inherit;
+  font-size: 13px;
+  padding: 4px 10px;
+  border: 1px solid var(--field-border);
+  border-radius: 4px;
+  background: var(--field-bg);
+  cursor: pointer;
+}
+.reset:disabled {
+  color: var(--disabled-text);
+  border-color: var(--disabled-border);
+  cursor: default;
+}
+
+.pair-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pair-list li {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+}
+.pair-n {
+  font-size: 12px;
+  color: var(--text-faint);
+  min-width: 20px;
+  text-align: right;
+  padding-top: 20px;
+  font-variant-numeric: tabular-nums;
+}
+.pair-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.pair-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pair-fields span {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+.pair-fields input {
+  font: inherit;
+  font-size: 14px;
+  padding: 5px 8px;
+  color: var(--text-h);
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  border-radius: 4px;
+  min-width: 0;
+}
+.pair-fields input:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -1px;
+}
+
+
+/* ------------------------------------------------------------- toolbar */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.title-input {
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 10px;
+  color: var(--text-h);
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  border-radius: 6px;
+  /* Takes the slack so the buttons sit together on the right, and shrinks
+     rather than pushing them onto their own line on a narrow screen. */
+  flex: 1 1 200px;
+  min-width: 0;
+}
+.title-input:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -1px;
+}
+.toolbar button {
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 14px;
+  color: var(--text-h);
+  border: 1px solid var(--field-border);
+  border-radius: 6px;
+  background: var(--field-bg);
+  cursor: pointer;
+}
+.toolbar button:hover {
+  border-color: var(--field-border-hover);
+}
+/* .download is declared earlier and on its own is less specific than
+   `.toolbar button`, which would otherwise repaint it white-on-white. */
+.toolbar button.download {
+  font-size: 15px;
+  color: var(--solid-text);
+  background: var(--solid-bg);
+  border-color: var(--solid-bg);
+}
+.toolbar button.download:disabled {
+  background: var(--disabled-bg);
+  border-color: var(--disabled-bg);
+  cursor: default;
+}
+/* The file input is driven by the Open… button, so that it can be styled
+   like the rest; it stays in the document (not display:none) so it is still
+   reachable by keyboard and by tests. */
+.hidden-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------- shape picker */
+
+.picker {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-bg);
+}
+.shape-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.shape {
+  font: inherit;
+  font-size: 14px;
+  padding: 7px 14px;
+  color: var(--text-h);
+  border: 1px solid var(--field-border);
+  border-radius: 999px;
+  background: var(--field-bg);
+  cursor: pointer;
+}
+.shape:hover {
+  border-color: var(--field-border-hover);
+}
+.shape.on {
+  background: var(--solid-bg);
+  border-color: var(--solid-bg);
+  color: var(--solid-text);
+}
+.picker-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.picker-controls select {
+  font: inherit;
+  font-size: 14px;
+  padding: 5px 8px;
+  color: var(--text-h);
+  border: 1px solid var(--field-border);
+  border-radius: 4px;
+  background: var(--field-bg);
+}
+.picker-controls .check {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
+.picker-summary {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* A button that reads as part of the sentence it sits in. */
+.linkish {
+  font: inherit;
+  font-size: inherit;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--link);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.editor-note .half {
+  color: var(--warning-half);
+}

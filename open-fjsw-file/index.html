@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="stylesheet" href="/src/seo.css" />
+    <!-- Head tags are written at build time; see seo/plugin.js. -->
+  </head>
+  <body>
+    <!--nav-->
+    <main class="page prose">
+      <h1>How to open an .fjsw file</h1>
+      <p class="lead">
+        An <code>.fjsw</code> file is a jigsaw made in Formulator Tarsia. You can open one here,
+        in this browser tab, on any computer — including the ones the desktop app will not run
+        on. The file is read on your own machine and is never uploaded.
+      </p>
+      <p><a class="cta" href="{{base}}">Open an .fjsw file</a></p>
+
+      <h2>What the file actually is</h2>
+      <p>
+        Formulator Tarsia, a free Windows program from Hermitech Laboratory, saves each puzzle as
+        one <code>.fjsw</code> file. Inside, it is XML: the template the puzzle uses, the
+        question and answer pairs, and any equations, stored as MathML. That is the whole reason
+        this page can exist — the format is readable, so a browser can be taught to read it.
+      </p>
+      <p>
+        If you search for this, you will mostly find sites telling you that
+        <code>.fjsw</code> cannot be converted and that you must install the desktop app, or
+        offering to convert it for you if you upload it first. Neither is necessary.
+      </p>
+
+      <h2>Opening one</h2>
+      <ul>
+        <li>Open the <a href="{{base}}">puzzle maker</a>.</li>
+        <li>Press <strong>Open…</strong> and choose your <code>.fjsw</code> file.</li>
+        <li>
+          The puzzle is drawn on screen, with its questions and answers in an editable list
+          beside it.
+        </li>
+        <li>
+          <strong>Download PDF</strong> gives you the pieces to cut out and a matching answer
+          sheet.
+        </li>
+      </ul>
+      <p>
+        Nothing is installed and no account is made. The whole thing is a static web page, so
+        once it has loaded it will keep working with the network switched off.
+      </p>
+
+      <h2>Which puzzles it can draw</h2>
+      <p>These templates are laid out and verified against real files:</p>
+      <ul>
+        <li><strong>Standard hexagonal jigsaw</strong> — 24 triangles tiled into a hexagon.</li>
+        <li>
+          <strong>Extended hexagonal jigsaw</strong> — the same hexagon, with the 12 outer edges
+          filled with decoy answers instead of left blank.
+        </li>
+        <li><strong>Standard triangular jigsaw</strong> — 16 triangles in a large triangle.</li>
+        <li><strong>Dominoes</strong> — a chain of any length.</li>
+        <li><strong>Matching rectangular cards</strong> — a two-column grid of any size.</li>
+      </ul>
+      <p>
+        Two more are drawn from a shape that was reconstructed rather than confirmed: the
+        <strong>4×4 square jigsaw</strong> and the <strong>parquet rosette</strong>. Both the
+        screen and the exported PDF say so plainly, so you find out before the photocopier rather
+        than after it.
+      </p>
+      <p>
+        A file using any other template still opens. Its questions and answers are read correctly
+        and you are told there is no layout for that shape yet — from there you can pour the
+        content into one of the shapes above and print that instead. A file you cannot open is a
+        file you have lost; that was the thing worth avoiding.
+      </p>
+
+      <h2>What does not survive the trip</h2>
+      <p>
+        <strong>Equations become text.</strong> MathML is flattened to plain characters on
+        import, so a simple expression comes through fine and a heavily typeset one will want
+        checking before you print it.
+      </p>
+      <p>
+        <strong>There is no save back to .fjsw.</strong> Save writes a
+        <code>.tarsia.json</code> file that this app reads back. Writing the original format
+        again would mean rebuilding the MathML that was just flattened, which would quietly
+        degrade the file rather than preserve it — so it is not offered at all.
+      </p>
+
+      <!--faq-->
+      <p style="margin-top: 32px"><a class="cta" href="{{base}}">Open your file</a></p>
+    </main>
+    <!--footer-->
+  </body>
+</html>

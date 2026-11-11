@@ -1,0 +1,192 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  /* ---- the app's own surfaces ------------------------------------------
+
+     App.css used to hardcode a light palette over the top of these
+     variables, so a visitor whose system asked for a dark scheme got white
+     buttons on a white page with invisible labels. Everything it needs is a
+     token now, defined here and overridden in the dark block below. */
+
+  /* Lighter than --text, but still 4.78:1 on the page background — these are
+     the 11px field labels and the row numbers, and the old hardcoded #777
+     and #888 did not clear AA at that size. */
+  --text-faint: #76707f;
+
+  /* Form controls and the buttons that look like them. */
+  --field-bg: #fff;
+  --field-border: #ccc;
+  --field-border-hover: #999;
+  --focus-ring: #1a1a1a;
+
+  /* The one solid button (Download PDF) and the selected shape. Inverted in
+     dark, where near-black on near-black would disappear. */
+  --solid-bg: #1a1a1a;
+  --solid-text: #fff;
+
+  --disabled-bg: #888;
+  --disabled-text: #aaa;
+  --disabled-border: #e6e6e6;
+
+  --panel-bg: #fafafa;
+  --link: #0b5fbd;
+
+  /* The puzzle preview is a preview of a printed page, and the SVG it holds
+     is white-filled with near-black strokes because that is what comes out
+     of the printer — the PDF export renders the very same components. So it
+     stays on white in both schemes: a sheet of paper is not themed. */
+  --sheet-bg: #fff;
+
+  --error-text: #b00020;
+  --error-bg: #fdecea;
+  --error-border: #f5c2c0;
+
+  --warning-text: #6b4700;
+  --warning-bg: #fff6e0;
+  --warning-border: #f0d38a;
+  --warning-half: #8a5300;
+
+  --notice-text: #26424f;
+  --notice-bg: #eef6fa;
+  --notice-border: #c3dce8;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+    --text-faint: #7c8290;
+
+    --field-bg: #1f2028;
+    --field-border: #3b3d4a;
+    --field-border-hover: #585b6b;
+    --focus-ring: #f3f4f6;
+
+    --solid-bg: #e8e7ee;
+    --solid-text: #16171d;
+
+    --disabled-bg: #3b3d4a;
+    --disabled-text: #6b6d7a;
+    --disabled-border: #2e303a;
+
+    --panel-bg: #1c1d24;
+    --link: #7fb4ff;
+
+    /* --sheet-bg is deliberately NOT overridden; see the light block. */
+
+    --error-text: #ff9d9d;
+    --error-bg: #2a1618;
+    --error-border: #5c2a2e;
+
+    --warning-text: #f0c86a;
+    --warning-bg: #2a2314;
+    --warning-border: #5c4a1e;
+    --warning-half: #d99a3c;
+
+    --notice-text: #a8cfe0;
+    --notice-bg: #16222a;
+    --notice-border: #2d4652;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}

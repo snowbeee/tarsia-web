@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="stylesheet" href="/src/seo.css" />
+    <!-- Head tags are written at build time; see seo/plugin.js. -->
+  </head>
+  <body>
+    <!--nav-->
+    <main class="page prose">
+      <h1>Tarsia puzzles without Windows</h1>
+      <p class="lead">
+        Formulator Tarsia is a Windows program, and there has never been a Mac build. This is the
+        same kind of tool as a web page: it makes the same cut-out puzzles, opens the
+        <code>.fjsw</code> files you already have, and prints them — from a Mac, a Chromebook, an
+        iPad or a Linux machine.
+      </p>
+      <p><a class="cta" href="{{base}}">Make a puzzle</a></p>
+
+      <h2>The usual ways round it, and what they cost</h2>
+      <p>
+        Teachers have been solving this for years, and all the solutions work. They are just
+        expensive in a way that is easy to underestimate when the thing you want is one
+        worksheet.
+      </p>
+      <ul>
+        <li>
+          <strong>A virtual machine</strong> — Parallels, VMware or UTM, plus a Windows licence.
+          Reliable, and the most expensive option in both money and disk space.
+        </li>
+        <li>
+          <strong>Wine or CrossOver</strong> — free or cheap, and often works, but it is an
+          afternoon of configuration that tends to need repeating after a major macOS update.
+        </li>
+        <li>
+          <strong>The school's one Windows machine</strong> — fine until you want to change a
+          question the evening before the lesson.
+        </li>
+      </ul>
+      <p>
+        None of them are available at all on a managed Chromebook or an iPad, which is what a
+        growing number of schools actually hand to staff.
+      </p>
+
+      <h2>What this does instead</h2>
+      <p>
+        It is a web page, so there is nothing to install and no device policy to get round. Open
+        it, type your question and answer pairs, choose a shape, and download a PDF of the pieces
+        and the answer sheet. If you already have <code>.fjsw</code> files, press
+        <strong>Open…</strong> and they are drawn from the file — see
+        <a href="{{base}}open-fjsw-file/">opening an .fjsw file</a> for which templates are
+        supported.
+      </p>
+      <p>
+        Everything happens inside the browser. Your file is read on your own machine, the layout
+        is computed there and the PDF is built there; nothing is uploaded, and after the first
+        load the page works offline.
+      </p>
+
+      <h2>Where it is better, and where it is not</h2>
+      <h3>Better</h3>
+      <ul>
+        <li>Runs on every machine a teacher is likely to be given.</li>
+        <li>
+          Offers puzzle sizes the desktop app never had — triangles from 4 to 36 pieces, hexagons
+          from 6 to 54, square grids, domino chains and matching cards, all generated rather than
+          drawn from a fixed list.
+        </li>
+        <li>
+          Outside edges can be labelled with decoys on any tiled shape, not only on the one
+          template that came with it.
+        </li>
+        <li>Nothing leaves your computer.</li>
+      </ul>
+      <h3>Not better</h3>
+      <ul>
+        <li>
+          It does not write <code>.fjsw</code> files. It saves its own
+          <code>.tarsia.json</code> instead, so a puzzle made here cannot be handed back to a
+          colleague still using the desktop app.
+        </li>
+        <li>
+          Equations in an imported file are flattened from MathML to plain text, so heavily
+          typeset maths will need a look before printing.
+        </li>
+      </ul>
+      <p>
+        For most people the trade is worth making: a department's existing files stay usable, and
+        new puzzles can be made on whatever is to hand.
+      </p>
+
+      <!--faq-->
+      <p style="margin-top: 32px"><a class="cta" href="{{base}}">Try it in this browser</a></p>
+    </main>
+    <!--footer-->
+  </body>
+</html>

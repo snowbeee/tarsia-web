@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+
+  // Without this, a bare `oxlint` walks node_modules and buries any real
+  // finding under thousands of warnings from dependencies. `samples` holds
+  // .fjsw fixtures, not source.
+  "ignorePatterns": ["node_modules", "dist", "samples"],
+
+  // react is off by default and is the one that matters here: it carries the
+  // rules-of-hooks checks, which catch real bugs rather than style.
+  "plugins": ["react", "typescript", "unicorn", "oxc"],
+
+  "rules": {
+    // Obsolete under the automatic JSX runtime that Vite and React 19 use:
+    // JSX no longer compiles to React.createElement, so React does not need
+    // to be in scope. 71 findings, every one of them spurious.
+    "react/react-in-jsx-scope": "off",
+
+    // Every keyed list here is fixed layout data — a layout's cells, a
+    // cell's three edge slots, a label's wrapped lines. None reorder or
+    // change length between renders, which is the case the rule exists to
+    // catch.
+    "react/no-array-index-key": "off"
+  },
+
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+
+  "env": {
+    "browser": true,
+    "es2024": true
+  }
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/seo.css" />
+    <!-- The title, description, canonical URL, social card and structured
+         data are written at build time by seo/plugin.js, from seo/site.js
+         and seo/faq.js. Don't add them here; they'd be duplicated. -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Below the app: what this is, in text that is in the HTML before any
+         script runs. The app itself is a React root and therefore invisible
+         to anything that doesn't execute JavaScript, which includes most of
+         what crawls a page. This part is the part that can be read. -->
+    <main class="page prose">
+      <h2>A Tarsia puzzle maker that runs in the browser</h2>
+      <p class="lead">
+        Type your question and answer pairs, choose a shape, and print a cut-out puzzle. It is
+        free, there is no account, and nothing is installed — the puzzle above is being drawn by
+        your own browser as you work.
+      </p>
+      <p>
+        A Tarsia is a set of pieces that fit together into a larger shape, where two pieces may
+        only touch where a question meets its answer. Students cut the pieces apart and rebuild
+        the shape, so the finished shape is itself the mark scheme: if it comes out right, the
+        answers were right. It is the kind of task that gets a quiet class talking about maths,
+        which is most of why teachers keep using it.
+      </p>
+
+      <h2>What you can make</h2>
+      <p>
+        The shapes are generated rather than copied from a fixed table, so they come in sizes the
+        original desktop app never offered.
+      </p>
+      <table class="shapes">
+        <thead>
+          <tr><th>Shape</th><th>Sizes</th><th>Pieces</th><th>Pairs</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Triangle</td><td>side 2–6</td><td>4–36</td><td>3–45</td></tr>
+          <tr><td>Hexagon</td><td>small / medium / large</td><td>6–54</td><td>6–72</td></tr>
+          <tr><td>Squares</td><td>2×2 – 5×5</td><td>4–25</td><td>4–40</td></tr>
+          <tr><td>Dominoes</td><td>6–20 questions</td><td>7–21</td><td>6–20</td></tr>
+          <tr><td>Matching cards</td><td>6–20 pairs</td><td>12–40</td><td>6–20</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Any tiled shape can have its <strong>outside edges labelled</strong> with plausible wrong
+        answers. Left blank, those edges quietly tell a student which pieces face outwards, and a
+        class that spots this can assemble a good deal of the puzzle without answering much.
+      </p>
+      <p>
+        Changing the shape or the size never throws away what you have already typed, so the
+        options are safe to try out. When you are finished, <strong>Download PDF</strong> gives
+        you the pieces to cut up and the answer sheet to check them against.
+      </p>
+
+      <h2>It also opens files from the desktop app</h2>
+      <p>
+        If you have a folder of <code>.fjsw</code> files made in Formulator Tarsia — your own, or
+        a department's collection built up over years — press <strong>Open…</strong> and pick
+        one. It is read, drawn, and editable: change a question, watch the puzzle redraw, print
+        the result. You do not need the desktop app installed, or Windows to run it on.
+      </p>
+      <p>
+        <a href="{{base}}open-fjsw-file/">How to open an .fjsw file</a> covers which templates are
+        supported and what happens to the ones that are not.
+      </p>
+
+      <h2>Your puzzles stay on your computer</h2>
+      <p>
+        There is no server here. The page is a few static files; reading the file you open,
+        laying out the puzzle and building the PDF all happen inside your browser, and nothing
+        you open or type is sent anywhere. Load the page once and you can carry on with the
+        network off.
+      </p>
+      <p>
+        This is worth being plain about, because the alternative is normal. Most "convert your
+        file online" tools work by uploading your file to somebody else's machine, and a school's
+        assessment material is not a holiday photo.
+      </p>
+
+      <!--faq-->
+
+      <p style="margin-top: 32px">
+        <a class="cta" href="#root">Start making a puzzle</a>
+      </p>
+    </main>
+    <!--footer-->
+  </body>
+</html>

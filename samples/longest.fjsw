@@ -1,0 +1,896 @@
+<!--
+
+Formulator Jigsaw Edition 2005
+Copyright (c) 2005 by Hermitech Laboratory. All Rights Reserved.
+http://www.hermitech.ic.zt.ua
+
+This file contains a summary information about the puzzle document.
+
+NOTE - Formulator Jigsaw Edition 2005 will add and remove 
+       information about the saved puzzle document in this 
+       file. Please do not edit what you see in these blocks 
+       of generated text. Changes to this file may cause 
+       incorrect behavior.
+
+-->
+
+<eqnpairs>
+  <author></author>
+  <institution></institution>
+  <comments></comments>
+  <template id='standard hexagonal jigsaw 30' left-margin='15.00' top-margin='15.00' right-margin='15.00' bottom-margin='15.00' width='210' height='297' scale='1.00' orientation='portrait'/>
+  <gui-settings>
+    <active-view view-id='solution'/>
+    <active-option view-id='input' option-id='input.paired.30'/>
+    <active-option view-id='output' option-id='output.normal size'/>
+    <active-option view-id='solution' option-id='solution.full version'/>
+    <active-option view-id='table' option-id='table'/>
+  </gui-settings>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Expand</mi>
+        <mtext>&nbsp;</mtext>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>5</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>5</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>25</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Expand</mi>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>10</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>10</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>100</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Expand</mi>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>7</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>7</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>49</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Expand</mi>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mi>a</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mi>a</mi>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Expand</mi>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <mo stretchy="false">(</mo>
+        <mn>3</mn>
+        <mo>&plus;</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mn>3</mn>
+        <mo>&minus;</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>9</mn>
+        <mo>&minus;</mo>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi mathvariant="italic">Expand</mi>
+            <mtext>&nbsp;&nbsp;</mtext>
+            <mtext>&nbsp;</mtext>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>&plus;</mo>
+            <mn>5</mn>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&plus;</mo>
+        <mn>10</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>25</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi mathvariant="italic">Expand</mi>
+            <mtext>&nbsp;</mtext>
+            <mtext>&nbsp;&nbsp;</mtext>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>&minus;</mo>
+            <mi>a</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>2</mn>
+        <mi mathvariant="italic">ax</mi>
+        <mo>&plus;</mo>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi mathvariant="italic">Expand</mi>
+            <mtext>&nbsp;&nbsp;</mtext>
+            <mtext>&nbsp;</mtext>
+            <mo stretchy="false">(</mo>
+            <mi>a</mi>
+            <mo>&minus;</mo>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi>a</mi>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>2</mn>
+        <mi mathvariant="italic">ax</mi>
+        <mo>&plus;</mo>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi mathvariant="italic">Expand</mi>
+            <mtext>&nbsp;</mtext>
+            <mtext>&nbsp;&nbsp;</mtext>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>&plus;</mo>
+            <mi>a</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi>x</mi>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&plus;</mo>
+        <mn>2</mn>
+        <mi mathvariant="italic">ax</mi>
+        <mo>&plus;</mo>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Expand</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mo stretchy="false">(</mo>
+        <mn>5</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>2</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mn>3</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>15</mn>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&plus;</mo>
+        <mn>11</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>2</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Expand</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mo stretchy="false">(</mo>
+        <mn>6</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>5</mn>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mn>2</mn>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>12</mn>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&plus;</mo>
+        <mn>4</mn>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>5</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Factorize</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mn>5</mn>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>20</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>5</mn>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>4</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Factorize</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mn>8</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>24</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>8</mn>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>3</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Factorize</mi>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <msup>
+          <mrow>
+            <mn>10</mn>
+            <mi>x</mi>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>15</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>5</mn>
+        <mo stretchy="false">(</mo>
+        <mn>2</mn>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>3</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Factorize</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mi mathvariant="italic">px</mi>
+        <mo>&minus;</mo>
+        <mn>3</mn>
+        <mi>p</mi>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mi>p</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>3</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi mathvariant="italic">Factorize</mi>
+            <mtext>&nbsp;</mtext>
+            <mtext>&nbsp;&nbsp;</mtext>
+            <mn>6</mn>
+            <mi>x</mi>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&plus;</mo>
+        <mn>9</mn>
+        <mi>x</mi>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>3</mn>
+        <mi>x</mi>
+        <mo stretchy="false">(</mo>
+        <mn>2</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>3</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Factorize</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mi mathvariant="italic">qx</mi>
+        <mo>&plus;</mo>
+        <msup>
+          <mi>q</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mi>q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mi>q</mi>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi mathvariant="italic">Factorize</mi>
+            <mtext>&nbsp;</mtext>
+            <mtext>&nbsp;&nbsp;</mtext>
+            <mn>15</mn>
+            <mi>x</mi>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mn>35</mn>
+        <mi>x</mi>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>5</mn>
+        <mi>x</mi>
+        <mo stretchy="false">(</mo>
+        <mn>3</mn>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>7</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Factorize</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mn>12</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>18</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>6</mn>
+        <mo stretchy="false">(</mo>
+        <mn>2</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>3</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi mathvariant="italic">Factorize</mi>
+            <mtext>&nbsp;</mtext>
+            <mtext>&nbsp;&nbsp;</mtext>
+            <mn>6</mn>
+            <mi mathvariant="italic">ax</mi>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&plus;</mo>
+        <mn>15</mn>
+        <mi mathvariant="italic">ax</mi>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>3</mn>
+        <mi mathvariant="italic">ax</mi>
+        <mo stretchy="false">(</mo>
+        <mn>2</mn>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>5</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <msup>
+          <mrow>
+            <mi mathvariant="italic">Factorize</mi>
+            <mtext>&nbsp;</mtext>
+            <mtext>&nbsp;&nbsp;</mtext>
+            <mi mathvariant="italic">ax</mi>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>&plus;</mo>
+        <mi mathvariant="italic">ax</mi>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">ax</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Factorize</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <msup>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>&minus;</mo>
+        <mi>x</mi>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mi>x</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Solve</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mn>2</mn>
+        <mi>x</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>5</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>2</mn>
+        <mo>.</mo>
+        <mn>5</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Solve</mi>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <mn>5</mn>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&plus;</mo>
+        <mn>4</mn>
+        <mo stretchy="false">)</mo>
+        <mo>&gt;</mo>
+        <mn>40</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mi>x</mi>
+        <mo>&gt;</mo>
+        <mn>4</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Solve</mi>
+        <mtext>&nbsp;&nbsp;&nbsp;</mtext>
+        <mn>3</mn>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>&minus;</mo>
+        <mn>7</mn>
+        <mo stretchy="false">)</mo>
+        <mo>&gt;</mo>
+        <mn>14</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mtext>&nbsp;</mtext>
+        <mi>x</mi>
+        <mo>&gt;</mo>
+        <mn>11</mn>
+        <mfrac>
+          <mn>2</mn>
+          <mn>3</mn>
+        </mfrac>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Simplify</mi>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <mfrac>
+          <mi mathvariant="italic">xy</mi>
+          <mrow>
+            <mn>4</mn>
+            <mi>y</mi>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mfrac>
+          <mi>x</mi>
+          <mn>4</mn>
+        </mfrac>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Simplify</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mfrac>
+          <mi mathvariant="italic">abc</mi>
+          <mi mathvariant="italic">acd</mi>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mfrac>
+          <mi>b</mi>
+          <mi>d</mi>
+        </mfrac>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Simplify</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mfrac>
+          <mrow>
+            <mn>24</mn>
+            <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+          <mrow>
+            <mn>6</mn>
+            <mi>x</mi>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>4</mn>
+        <mi>x</mi>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Simplify</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mfrac>
+          <mrow>
+            <mn>8</mn>
+            <mi mathvariant="italic">st</mi>
+          </mrow>
+          <mrow>
+            <mn>6</mn>
+            <mi mathvariant="italic">sr</mi>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mfrac>
+          <mrow>
+            <mn>4</mn>
+            <mi>t</mi>
+          </mrow>
+          <mrow>
+            <mn>3</mn>
+            <mi>r</mi>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mi mathvariant="italic">Simplify</mi>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <mtext>&nbsp;</mtext>
+        <mfrac>
+          <mrow>
+            <mn>4</mn>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>&minus;</mo>
+            <mn>2</mn>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow>
+            <mn>2</mn>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>&minus;</mo>
+            <mn>2</mn>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>2</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+</eqnpairs>

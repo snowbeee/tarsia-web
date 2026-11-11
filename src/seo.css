@@ -1,0 +1,209 @@
+/* Styling for the written pages — the homepage's section below the app, and
+   the three standalone pages, which carry no script at all.
+
+   Colours come from the custom properties in index.css, so these pages are
+   correct in a dark colour scheme as well as a light one. */
+
+.page {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.prose {
+  padding-block: 0 24px;
+}
+
+/* On the homepage the written part sits below the app, which fills the first
+   screen, and the rule is the seam between the two. An article page has no
+   app above it, so it gets no seam — hence the adjacent-sibling selector
+   rather than a rule on .prose itself. */
+#root + .prose {
+  border-top: 1px solid var(--border);
+  margin-top: 48px;
+  padding-top: 48px;
+}
+
+.prose h2 {
+  margin: 40px 0 12px;
+}
+.prose h2:first-child {
+  margin-top: 0;
+}
+.prose h3 {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--text-h);
+  margin: 28px 0 8px;
+}
+.prose p,
+.prose li {
+  max-width: 68ch;
+}
+.prose p + p {
+  margin-top: 12px;
+}
+.prose ul {
+  padding-left: 22px;
+  margin: 12px 0;
+}
+.prose li + li {
+  margin-top: 8px;
+}
+.prose a {
+  color: var(--accent);
+}
+.prose strong {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+/* The lead paragraph does the job a page's first screen has to do: say what
+   this is, to somebody who arrived from a search result and will leave if the
+   answer is not immediate. */
+.lead {
+  font-size: 1.1em;
+  color: var(--text-h);
+  max-width: 62ch;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 11px 20px;
+  border-radius: 6px;
+  background: var(--text-h);
+  color: var(--bg);
+  text-decoration: none;
+  font-size: 16px;
+}
+/* `.prose a` is the more specific selector and would otherwise paint this
+   accent-on-near-black, which is unreadable in both colour schemes. */
+.prose a.cta {
+  color: var(--bg);
+}
+.cta:hover {
+  opacity: 0.85;
+}
+
+table.shapes {
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+  width: 100%;
+  max-width: 640px;
+}
+table.shapes th,
+table.shapes td {
+  border-bottom: 1px solid var(--border);
+  padding: 8px 12px 8px 0;
+  text-align: left;
+}
+table.shapes th {
+  color: var(--text-h);
+  font-weight: 500;
+}
+
+/* ------------------------------------------------------------------ FAQ */
+
+.faq dl {
+  margin: 16px 0 0;
+}
+.faq dt {
+  font-family: var(--heading);
+  color: var(--text-h);
+  font-weight: 500;
+  margin-top: 24px;
+}
+.faq dd {
+  margin: 6px 0 0;
+  max-width: 68ch;
+}
+
+/* --------------------------------------------------------- nav + footer */
+
+/* Nav and footer carry the page width themselves, so their rules line up
+   with the app's own 1126px frame instead of running the full window. */
+.site-nav,
+.site-footer {
+  width: 1126px;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 24px;
+  box-sizing: border-box;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 24px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.site-nav .brand {
+  font-family: var(--heading);
+  font-size: 19px;
+  color: var(--text-h);
+  text-decoration: none;
+  margin-right: auto;
+}
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a[aria-current='page'] {
+  color: var(--accent);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 56px;
+  padding-block: 24px 48px;
+}
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 15px;
+}
+.site-footer a {
+  color: var(--accent);
+}
+.small {
+  font-size: 14px;
+  max-width: 68ch;
+}
+
+/* An article page has no app above it, so it opens with its own title.
+   The line height has to be stated: :root sets `font: 18px/145%`, which
+   computes to a fixed pixel line height that every heading inherits, so a
+   title long enough to wrap would otherwise overlap its own second line. */
+.page > h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+  margin: 40px 0 16px;
+  max-width: 22ch;
+}
+@media (max-width: 1024px) {
+  .page > h1 {
+    font-size: 30px;
+  }
+}

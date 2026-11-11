@@ -1,0 +1,405 @@
+<!--
+
+Formulator Jigsaw Edition 2005
+Copyright (c) 2005 by Hermitech Laboratory. All Rights Reserved.
+http://www.hermitech.ic.zt.ua
+
+This file contains a summary information about the puzzle document.
+
+NOTE - Formulator Jigsaw Edition 2005 will add and remove 
+       information about the saved puzzle document in this 
+       file. Please do not edit what you see in these blocks 
+       of generated text. Changes to this file may cause 
+       incorrect behavior.
+
+-->
+
+<eqnpairs>
+  <author></author>
+  <institution></institution>
+  <comments></comments>
+  <template id='standard triangular jigsaw 18' left-margin='15.00' top-margin='15.00' right-margin='15.00' bottom-margin='15.00' width='210' height='297' scale='1.00' orientation='portrait'/>
+  <gui-settings>
+    <active-view view-id='solution'/>
+    <active-option view-id='input' option-id='input.paired.17'/>
+    <active-option view-id='output' option-id='output.normal size'/>
+    <active-option view-id='solution' option-id='solution.full version'/>
+    <active-option view-id='table' option-id='table'/>
+  </gui-settings>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>3</mn>
+        <mi>y</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>&minus;</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>6</mn>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>21</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>9</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>4</mn>
+        <mi>t</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>&minus;</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>2</mn>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>10</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>3</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mfrac>
+          <mrow>
+            <mn>3</mn>
+            <mi>a</mi>
+          </mrow>
+          <mn>8</mn>
+        </mfrac>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>6</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>16</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>4</mn>
+        <mi>x</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>32</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>8</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>8</mn>
+        <mi>t</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>96</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>12</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>12</mn>
+        <mi>a</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>24</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>2</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>9</mn>
+        <mi>w</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mmultiscripts>
+          <mn>27</mn>
+          <mprescripts/>
+          <none/>
+          <mo>&minus;</mo>
+        </mmultiscripts>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mmultiscripts>
+          <mn>3</mn>
+          <mprescripts/>
+          <none/>
+          <mo>&minus;</mo>
+        </mmultiscripts>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>13</mn>
+        <mi>p</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>169</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>13</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>7</mn>
+        <mi>y</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>+</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>22</mn>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>71</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>7</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>9</mn>
+        <mi>z</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>+</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>14</mn>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>50</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>4</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mfrac>
+          <mi>x</mi>
+          <mn>2</mn>
+        </mfrac>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>15</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>30</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mfrac>
+          <mi>a</mi>
+          <mn>6</mn>
+        </mfrac>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>12</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>72</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>64</mn>
+        <mi>p</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>32</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>5</mn>
+        <mi>x</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>+</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>6</mn>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>2</mn>
+        <mi>x</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>+</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>45</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>13</mn>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>8</mn>
+        <mi>h</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>+</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>2</mn>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>4</mn>
+        <mi>h</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>+</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>12</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>2</mn>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>6</mn>
+        <mi>m</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>&minus;</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>2</mn>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>10</mn>
+        <mi>m</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>&minus;</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>5</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mfrac>
+          <mn>3</mn>
+          <mn>4</mn>
+        </mfrac>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+    <math display="block">
+      <mrow>
+        <mn>4</mn>
+        <mi>k</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>&minus;</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>12</mn>
+        <mtext>&nbsp;</mtext>
+        <mo>=</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>6</mn>
+        <mi>k</mi>
+        <mtext>&nbsp;</mtext>
+        <mo>&minus;</mo>
+        <mtext>&nbsp;</mtext>
+        <mn>15</mn>
+      </mrow>
+    </math>
+    <math display="block">
+      <mrow>
+        <mn>1</mn>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+      </mrow>
+    </math>
+  </eqnpair>
+  <eqnpair>
+  </eqnpair>
+</eqnpairs>
