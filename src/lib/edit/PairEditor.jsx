@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { collectSlotCodes } from '../layouts'
+import { placedPairs } from '../layouts'
 import PastePanel from './PastePanel.jsx'
 
 // Editing a puzzle's content — the same list whether the puzzle was imported
@@ -22,15 +22,7 @@ const filledIn = (row) =>
 
 export default function PairEditor({ pairs, layout, onChange, onPaste, reset, describeHidden }) {
   const [pasting, setPasting] = useState(false)
-  const codes = collectSlotCodes(layout)
-
-  const rows = pairs
-    .map((pair) => ({
-      pair,
-      usesQuestion: codes.has(`${pair.n}q`),
-      usesAnswer: codes.has(`${pair.n}a`),
-    }))
-    .filter((row) => row.usesQuestion || row.usesAnswer)
+  const rows = placedPairs(pairs, layout)
 
   const hidden = pairs.length - rows.length
 

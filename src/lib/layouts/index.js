@@ -79,6 +79,30 @@ export function collectSlotCodes(layout) {
 }
 
 /**
+ * The pairs a layout actually draws, in the order it draws them, each marked
+ * with which of its two halves the layout places.
+ *
+ * Three things need this and must agree about it: the editor (which boxes to
+ * show), pasting a list (where incoming rows land) and the PDF's pair table
+ * (what to print). They disagreed by having three copies of the walk, and
+ * getting it wrong is not cosmetic — an extended hexagon's outer rim carries
+ * twelve decoys with no answer slot, and a domino chain's sentinel pair is
+ * never placed at all, so counting by index writes content into positions
+ * nothing will ever draw.
+ */
+export function placedPairs(pairs, layout) {
+  const codes = collectSlotCodes(layout)
+  return pairs
+    .map((pair, index) => ({
+      pair,
+      index,
+      usesQuestion: codes.has(`${pair.n}q`),
+      usesAnswer: codes.has(`${pair.n}a`),
+    }))
+    .filter((row) => row.usesQuestion || row.usesAnswer)
+}
+
+/**
  * How many numbered pairs a layout actually needs — the highest pair number
  * it places anywhere.
  *

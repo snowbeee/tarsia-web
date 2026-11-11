@@ -1,11 +1,12 @@
 import { createRoot } from 'react-dom/client'
 import PuzzleView from '../render/PuzzleView'
 import PiecesView from '../render/PiecesView'
-import { missingGlyphs, PDF_FONT_NAME } from '../render/font'
-import { loadPuzzleFont, registerPuzzleFont } from '../render/puzzleFont'
+import { missingGlyphs, PDF_FONT_NAME, registerPuzzleFont } from '../render/font'
+import { loadPuzzleFont } from '../render/puzzleFont'
+import { drawPairsTable } from './pairsTable'
 
-// Builds the print-ready PDF: the pieces to cut out, then the solved puzzle
-// as a teacher's answer key.
+// Builds the print-ready PDF: the pieces to cut out, the solved puzzle as a
+// teacher's answer key, and the pairs as a readable list.
 //
 // Pages are produced from the same React renderers the screen uses, converted
 // as vector (svg2pdf), not rasterised — a cut-out worksheet is printed and
@@ -129,6 +130,11 @@ export async function buildPuzzlePdf({ layout, pairs, title }) {
       await drawPage(pdf, svg, plan, page.label, notes, headerMm)
     })
   }
+
+  // Last, because it is the page you consult rather than hand out — and it
+  // adds its own pages, so it has to come after the two that decide their own
+  // orientation from the drawing.
+  drawPairsTable(pdf, { pairs, layout, title })
 
   pdf.setProperties({ title, creator: 'Tarsia Web' })
   return pdf.output('blob')

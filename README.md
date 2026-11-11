@@ -165,6 +165,7 @@ src/
       pastePairs.js           — parses pasted text; lays it onto the rows a layout uses
     pdf/
       exportPuzzlePdf.jsx   — builds the worksheet + answer key PDF
+      pairsTable.js          — the third page: every pair as a readable list
     render/
       PuzzleView.jsx       — dispatches to the right renderer by shape
       PiecesView.jsx        — renders the cut-out sheet (scrambled pieces)

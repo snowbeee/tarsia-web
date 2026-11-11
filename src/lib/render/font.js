@@ -18,6 +18,26 @@
 // what the browser shows in the moment before the font has arrived; the
 // export waits for the real thing rather than falling back (see puzzleFont.js).
 export const PDF_FONT_NAME = 'DejaVuSans'
+
+// The name the bytes are filed under inside the PDF. Only ever used by the
+// two lines below.
+const FONT_FILE = 'DejaVuSans-subset.ttf'
+
+/**
+ * Registers the font with a jsPDF document, under the same name svg2pdf will
+ * resolve `font-family` to. Selecting it is left to the caller — svg2pdf
+ * changes the current font as it draws, so anything written with jsPDF's own
+ * text API has to ask for it again.
+ *
+ * Lives here rather than beside the fetching in puzzleFont.js: it does not
+ * fetch anything, it is handed bytes someone else already has, and that file
+ * imports the .ttf through Vite — which put this out of reach of any test
+ * that isn't running in a browser.
+ */
+export function registerPuzzleFont(pdf, base64) {
+  pdf.addFileToVFS(FONT_FILE, base64)
+  pdf.addFont(FONT_FILE, PDF_FONT_NAME, 'normal')
+}
 export const FONT_FAMILY = `${PDF_FONT_NAME}, system-ui, sans-serif`
 
 // Which characters the PDF can actually draw, as runs of codepoints.

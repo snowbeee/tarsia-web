@@ -13,8 +13,6 @@ import { resetTextMeasurement } from './fitText'
 // the labels on screen would be measured in the fallback font and re-fit the
 // moment the font arrived, which looks like the puzzle rearranging itself.
 
-const FONT_FILE = 'DejaVuSans-subset.ttf'
-
 let pending = null
 
 /** @returns {Promise<string>} the font file, base64, for jsPDF's VFS */
@@ -42,16 +40,6 @@ async function fetchFont() {
   return base64
 }
 
-/**
- * Registers the font with a jsPDF document, under the same name svg2pdf will
- * resolve `font-family` to. Selecting it is left to the caller — svg2pdf
- * changes the current font as it draws, so anything written with jsPDF's own
- * text API has to ask for it again.
- */
-export function registerPuzzleFont(pdf, base64) {
-  pdf.addFileToVFS(FONT_FILE, base64)
-  pdf.addFont(FONT_FILE, PDF_FONT_NAME, 'normal')
-}
 
 // btoa takes a string, and String.fromCharCode(...bytes) overflows the call
 // stack somewhere around 100 KB — which is exactly the size of this file.

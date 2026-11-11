@@ -1,4 +1,4 @@
-import { collectSlotCodes } from '../layouts'
+import { placedPairs } from '../layouts'
 
 // Getting a list of pairs in from somewhere else.
 //
@@ -78,10 +78,7 @@ export function parsePastedPairs(text) {
  * @returns {{pairs: object[], used: number, spare: number, droppedAnswers: number}}
  */
 export function fillPairsFrom(pairs, layout, parsed) {
-  const codes = collectSlotCodes(layout)
-  const slots = pairs
-    .map((pair, index) => ({ index, usesQuestion: codes.has(`${pair.n}q`), usesAnswer: codes.has(`${pair.n}a`) }))
-    .filter((slot) => slot.usesQuestion || slot.usesAnswer)
+  const slots = placedPairs(pairs, layout)
 
   const next = pairs.map((pair) => ({ ...pair }))
   let droppedAnswers = 0
