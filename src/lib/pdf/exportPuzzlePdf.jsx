@@ -82,6 +82,32 @@ async function drawPage(pdf, svgEl, plan, title, notes, headerMm) {
   })
 }
 
+/**
+ * jsPDF and svg2pdf together are most of this app's weight, so they are
+ * fetched only when somebody actually asks for a PDF — which opens a gap
+ * nobody thinks about: the page was loaded from one deployment and the
+ * chunk is requested from a later one, by which time the file it names is
+ * gone and the fetch 404s.
+ *
+ * The browser reports that as "Failed to fetch dynamically imported module",
+ * which tells a teacher nothing and suggests nothing. Reloading fixes it, so
+ * say that instead.
+ */
+async function loadPdfLibraries() {
+  try {
+    const jspdf = await import('jspdf')
+    await import('svg2pdf.js') // patches jsPDF with .svg()
+    return jspdf
+  } catch (cause) {
+    const error = new Error(
+      'The part of the app that builds PDFs could not be loaded. This usually means a new version was published while this page was open.',
+    )
+    error.needsReload = true
+    error.cause = cause
+    throw error
+  }
+}
+
 const codepointOf = (ch) => 'U+' + ch.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')
 
 /**
@@ -89,8 +115,7 @@ const codepointOf = (ch) => 'U+' + ch.codePointAt(0).toString(16).toUpperCase().
  * @returns {Promise<Blob>}
  */
 export async function buildPuzzlePdf({ layout, pairs, title }) {
-  const { jsPDF } = await import('jspdf')
-  await import('svg2pdf.js') // patches jsPDF with .svg()
+  const { jsPDF } = await loadPdfLibraries()
   // Before anything is rendered, not just before anything is drawn: the
   // offscreen pages below are measured in whatever font the browser has for
   // them at the time, and the whole point is that it is this one.

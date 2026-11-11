@@ -138,6 +138,8 @@ function group(text) {
 // eventually want to keep the MathML around and render it with MathJax/
 // KaTeX-mathml instead of flattening, but plain text is enough to get a
 // puzzle on screen and to drive the builder / edit flows.
+const nonEmpty = (text) => text.trim() !== ''
+
 function mathMlToText(node) {
   if (!node) return ''
   const tag = node.tagName ? node.tagName.toLowerCase() : ''
@@ -174,12 +176,18 @@ function mathMlToText(node) {
       // with nothing between them the rows run together: "x+y=7" followed by
       // "2x+y=8" reads as "x+y=72x+y=8", and a student sees 72. The comma
       // separates them and gives the label somewhere to wrap.
-      return Array.from(node.children).map(mathMlToText).join(', ')
+      //
+      // Empty rows are dropped rather than separated: the desktop app's
+      // editor leaves a trailing blank row behind in some files, and joining
+      // it like a real one printed "5x+7=2," — a comma a student has to
+      // decide whether to believe.
+      return Array.from(node.children).map(mathMlToText).filter(nonEmpty).join(', ')
     case 'mtr':
       // And the cells within a row, for the same reason one level down. A
       // table of values for y = 2x + 2 was coming out as "y246810", which
-      // could be read as 24, 68, 10 as easily as 2, 4, 6, 8, 10.
-      return Array.from(node.children).map(mathMlToText).join(' ')
+      // could be read as 24, 68, 10 as easily as 2, 4, 6, 8, 10. Empty cells
+      // are dropped for the same reason empty rows are.
+      return Array.from(node.children).map(mathMlToText).filter(nonEmpty).join(' ')
     case 'mmultiscripts': {
       // Simplified: just render the base, ignore pre/post scripts.
       const first = node.children[0]

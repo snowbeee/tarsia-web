@@ -203,7 +203,10 @@ function App() {
       const blob = await buildPuzzlePdf({ layout, pairs, title: title || 'Puzzle' })
       downloadBlob(blob, `${title || 'puzzle'}.pdf`)
     } catch (e) {
-      fail(`Could not build the PDF: ${e.message}`)
+      // A stale build is not the teacher's fault and is one click from being
+      // fixed, so it gets the fix rather than the diagnosis.
+      if (e.needsReload) setFailure({ message: e.message, report: null, canReload: true })
+      else fail(`Could not build the PDF: ${e.message}`)
     } finally {
       setBusy(false)
     }
@@ -305,6 +308,15 @@ function App() {
         <div className="error">
           <p>{failure.message}</p>
           {failure.report && <ReportLinks about={failure.report} />}
+          {failure.canReload && (
+            <p className="error-actions">
+              Your puzzle is saved and will be offered back.{' '}
+              <button type="button" className="linkish" onClick={() => window.location.reload()}>
+                Reload the page
+              </button>{' '}
+              and try again.
+            </p>
+          )}
         </div>
       )}
 

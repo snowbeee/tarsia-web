@@ -88,3 +88,27 @@ test('every sample still parses, with a template and some content', () => {
     assert.ok(pairs.some((p) => p.question !== '' || p.answer !== ''), `${file} has text`)
   }
 })
+
+// Found in a real file from TES: the desktop app's editor can leave a blank
+// row behind inside an <mtable>, and joining it like a row with content
+// printed "5x+7=2," on the puzzle — a comma a student has to decide whether
+// to believe.
+test('a blank row inside a table adds no separator of its own', () => {
+  const mathml = `<mtable>
+      <mtr><mtd><mn>5</mn><mi>x</mi><mo>+</mo><mn>7</mn><mo>=</mo><mn>2</mn></mtd></mtr>
+      <mtr><mtd><mrow></mrow></mtd></mtr>
+    </mtable>`
+  assert.equal(question(mathml), '5x+7=2')
+})
+
+test('rows that do have content are still separated', () => {
+  const mathml = `<mtable>
+      <mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr>
+      <mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>8</mn></mtd></mtr>
+    </mtable>`
+  assert.equal(question(mathml), 'x+y=7, 2x+y=8')
+})
+
+test('an entirely empty table yields nothing, not a string of separators', () => {
+  assert.equal(question('<mtable><mtr><mtd></mtd></mtr><mtr><mtd></mtd></mtr></mtable>'), '')
+})
