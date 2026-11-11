@@ -9,11 +9,6 @@
      every link on the written pages is drawn in. The dark scheme's lighter
      purple below is already fine at 6.77:1. */
   --accent: #a033f5;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   /* ---- the app's own surfaces ------------------------------------------
 
@@ -91,11 +86,6 @@
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
 
     --text-faint: #7c8290;
 
@@ -128,10 +118,6 @@
     --notice-text: #a8cfe0;
     --notice-bg: #16222a;
     --notice-border: #2d4652;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
   }
 }
 
