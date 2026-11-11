@@ -13,8 +13,15 @@ export const ISSUES_URL = `${REPO_URL}/issues`
 // because a dead mailto: fails at the exact moment someone had decided to
 // tell you something.
 //
-// This is a plain mailto: on a public page, so the address is harvestable.
-// That is a deliberate trade: obfuscating it would mean assembling the link
-// in JavaScript, and the pages that carry it are deliberately script-free so
-// that they load fast and read correctly without one.
+// Written as a plain mailto:, which on a public page would be harvestable —
+// obfuscating it in the source would mean assembling the link in JavaScript,
+// and these pages carry no script of their own on purpose.
+//
+// In production it is obfuscated anyway: Cloudflare's Email Obfuscation
+// rewrites the href to /cdn-cgi/l/email-protection#… at the edge and injects
+// a decoder, so the address is not in the HTML a scraper reads. Checked on
+// the live site — the link resolves back to a real mailto: once that script
+// runs. The cost is that this one link, alone on these pages, now needs
+// JavaScript to work; turning the feature off in the Cloudflare dashboard
+// puts the plain address back.
 export const CONTACT_EMAIL = 'jakub.syrovy@gmail.com'
